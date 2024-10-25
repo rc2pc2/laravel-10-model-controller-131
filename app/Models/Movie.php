@@ -9,6 +9,7 @@ use Illuminate\Support\Carbon;
 class Movie extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $table = "movies_tablez";
 
     public function getFormattedDate(){
