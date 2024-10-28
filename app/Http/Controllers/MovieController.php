@@ -10,7 +10,7 @@ class MovieController extends Controller
     public function index(){
 
         // # SELECT * FROM `movies`;
-        $movies = Movie::all();
+        // $movies = Movie::all();
 
         // % SELECT * FROM `movies` WHERE `id` = 1;
         // $movies = Movie::where("id", 1)->get(); // < restituisce una collection di istanze di tipo Movie
@@ -35,6 +35,7 @@ class MovieController extends Controller
         // < altrimenti manda erroro 404
         // $movie = Movie::findOrFail(1);
 
+        $movies = Movie::all();
         return view("movies.index", compact("movies"));
     }
 }

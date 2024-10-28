@@ -12,11 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // # classe per stabilire l'ordine di esecuzione dei seeder
+        $this->call([
+            ActorSeeder::class,
+            GenreSeeder::class,
+            MovieSeeder::class,
+        ]);
     }
 }

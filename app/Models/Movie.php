@@ -9,8 +9,13 @@ use Illuminate\Support\Carbon;
 class Movie extends Model
 {
     use HasFactory;
-    public $timestamps = false;
-    protected $table = "movies_tablez";
+    protected $fillable = [
+        "title",
+        "date",
+        "nationality",
+        "original_title",
+        "vote"
+    ];
 
     public function getFormattedDate(){
         $formattedDate = Carbon::create($this->date, "Europe/Rome");
