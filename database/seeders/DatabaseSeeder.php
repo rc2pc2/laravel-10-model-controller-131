@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         // # classe per stabilire l'ordine di esecuzione dei seeder
         $this->call([
             ActorSeeder::class,
+            CinemaSeeder::class,
             GenreSeeder::class,
             MovieSeeder::class,
         ]);
